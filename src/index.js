@@ -25,6 +25,9 @@ import intlReducer from './components/App/reducers/intlReducer';
 //
 import Saga from './components/App/saga';
 import App from './components/App/App';
+
+require('dotenv').config();
+
 // import registerServiceWorker from './registerServiceWorker';
 
 const reducer = combineReducers({

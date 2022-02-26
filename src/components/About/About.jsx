@@ -26,7 +26,9 @@ const About = ({ locale, closeCard }) => (
   <FullScreenCard onClick={closeCard}>
     <Title>{t('aboutCard.heading')}</Title>
     <Description>
-      {content.map(({ id, paragraph }) => <p key={id}>{paragraph[locale]}</p>)}
+      {content.map(({ id, paragraph }) => (
+        <p key={id}>{paragraph[locale]}</p>
+      ))}
     </Description>
     <SubTitle>Команда проекта</SubTitle>
     <CompaniesContainer>
@@ -120,7 +122,8 @@ const About = ({ locale, closeCard }) => (
         Проект реализован с использованием гранта Президента Российской
         Федерации на развитие гражданского общества, предоставленного Фондом
         президентских грантов. Воспоминания людей, прошедших лагеря, и тех, кого
-        коснулись репрессии, можно посмотреть на сайте проекта «Мой ГУЛАГ»:{' '}
+        коснулись репрессии, можно посмотреть на сайте проекта «Мой ГУЛАГ»:
+        {' '}
         <Link
           href='https://mygulag.ru'
           rel='noopener noreferrer'
